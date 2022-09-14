@@ -28,20 +28,24 @@ header {
   z-index: 10;
   top: 0;
   left: 0;
-  background: rgba(225, 225, 225, 0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 header:hover {
-  background: rgba(225, 225, 225, 1);
+  background: rgba(255, 255, 255, 1);
+}
+
+header.sticky {
+  background: rgba(255, 255, 255, 1);
 }
 
 .logo {
   flex: 1;
 }
 
-.logo img{
+.logo img {
   width: 150px;
-  
+
 }
 
 .menu {
@@ -54,7 +58,7 @@ header:hover {
   padding: 0 12px;
   position: relative;
 }
-  
+
 .menu li a {
   font-size: 14px;
   font-weight: bold;
@@ -73,10 +77,22 @@ header:hover {
 
 }
 
-
-
 .other li {
   padding: 0 12px;
+  position: relative;
+}
+
+.other li::after {
+  
+  content: "";
+  display: block;
+  width: 1px;
+  height: 50%;
+  background: #CCCCCC;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .other li:first-child {
@@ -181,11 +197,6 @@ footer {
 .footer-top li:last-child a {
   margin-right: 12px;
   color: #333;
-}
-
-.footer-center p span {
-  font-weight: bold;
-
 }
 
 .footer-center {

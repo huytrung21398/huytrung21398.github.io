@@ -212,13 +212,13 @@
         <li>
             <a href="" class="fab fa-facebook"></a>
             <a href="" class="fab fa-twitter"></a>
-            <a href="" class="fap fa-youtube"></a>
+            <a href="" class="fab fa-youtube"></a>
         </li>
     </div>
     <div class="footer-center">
-        <p> Công ty Cổ phần 80Authentics số đăng ký kinh doan:88886666</br>
-            Địa chỉ đăng ký: 129 Nguyễn Trãi - Phường Thượng Đình - Quận Thanh Xuân - Hà Nội</br>
-            Đặt hàng online: <span>0384.286.898</span></p>
+        <p> Công ty Cổ phần 80-Authentics số đăng ký kinh doanh: 8888866666</br>
+            Địa chỉ đăng ký: 129 Nguyễn Trãi - Phường Thượng Đình - Quận Thanh Xuân - TP.Hà Nội</br>
+            Đặt hàng online: <b>0384.286.898</b></p>
      
     </div>
    
@@ -228,6 +228,19 @@
 
 
     <script>
+        const header = document.querySelector("header")
+        window.addEventListener("scroll", function(){
+            x = window.pageYOffset
+            if(x>0){
+                header.classList.add("sticky")
+                
+            }
+            else{
+                header.classList.remove("sticky")
+            }
+        })
+
+        // Slide----------------------------------------------
         var slideshowDuration = 4000;
         var slideshow = $('.main-content .slideshow');
 
